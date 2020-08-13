@@ -12,57 +12,34 @@ const themeStorage = window.localStorage;
 
 //switch theme dynamically
 const applyTheme = () => {
-  if (toggleSwitch.checked) {
-    //dark-mode
-    themeStorage.setItem('hello-seoul-theme', 'dark');
-    document.documentElement.setAttribute('data-theme', 'dark');
-    toggleSwitchIcon.className = 'fas fa-moon';
+  const theme = toggleSwitch.checked ? 'dark' : 'light';
+  const src = toggleSwitch.checked ? imgDarkLinks : imgLightLinks;
 
-    // hello seoul section
-    imgAuthorLink.textContent = `author by ${imgDarkLinks.background.author}`;
-    imgAuthorLink.setAttribute('href', imgDarkLinks.background.link);
-    helloSeoulSection.style.backgroundImage = `url('assets/seoul-img/background_dark.jpg')`;
+  //theme mode
+  themeStorage.setItem('hello-seoul-theme', theme);
+  document.documentElement.setAttribute('data-theme', theme);
+  toggleSwitchIcon.className = toggleSwitch.checked ? 'fas fa-moon' : 'fas fa-sun';
 
-    //peek section
-    for (let i = 0; i < 3; i++) {
-      peekImgs[i].setAttribute('src', `assets/seoul-img/img${i + 1}_dark.jpg`);
-      imgAnchors[i].setAttribute('href', imgDarkLinks[i]);
-    }
-    //event section
-    eventTitle.textContent = 'night event';
-    events.forEach((event, index) => {
-      event.querySelector('h2').textContent = imgDarkLinks.events[index].title;
-      event.querySelector('img').setAttribute('src', imgDarkLinks.events[index].link);
-    });
-    //contact section
-    contactImg.setAttribute('src', 'assets/contact_dark.svg');
-  } else {
-    //light-mode
-    themeStorage.setItem('hello-seoul-theme', 'light');
-    document.documentElement.setAttribute('data-theme', 'light');
-    toggleSwitchIcon.className = 'fas fa-sun';
+  // hello seoul section
+  imgAuthorLink.textContent = `author by ${src.background.author}`;
+  imgAuthorLink.setAttribute('href', src.background.link);
+  helloSeoulSection.style.backgroundImage = `url('assets/seoul-img/background_${theme}.jpg')`;
 
-    //hello-seoul section
-    imgAuthorLink.textContent = `author by ${imgLightLinks.background.author}`;
-    imgAuthorLink.setAttribute('href', imgLightLinks.background.link);
-    helloSeoulSection.style.backgroundImage = `url('assets/seoul-img/background_light.jpg')`;
-
-    //peek section
-    for (let i = 0; i < 3; i++) {
-      peekImgs[i].setAttribute('src', `assets/seoul-img/img${i + 1}_light.jpg`);
-      imgAnchors[i].setAttribute('href', imgLightLinks[i]);
-    }
-
-    //event section
-    eventTitle.textContent = 'day event';
-    events.forEach((event, index) => {
-      event.querySelector('h2').textContent = imgLightLinks.events[index].title;
-      event.querySelector('img').setAttribute('src', imgLightLinks.events[index].link);
-    });
-
-    //contact section
-    contactImg.setAttribute('src', 'assets/contact_light.svg');
+  //peek section
+  for (let i = 0; i < 3; i++) {
+    peekImgs[i].setAttribute('src', `assets/seoul-img/img${i + 1}_${theme}.jpg`);
+    imgAnchors[i].setAttribute('href', src[i]);
   }
+
+  //event section
+  eventTitle.textContent = toggleSwitch.checked ? 'night event' : 'day event';
+  events.forEach((event, index) => {
+    event.querySelector('h2').textContent = src.events[index].title;
+    event.querySelector('img').setAttribute('src', src.events[index].link);
+  });
+
+  //contact section
+  contactImg.setAttribute('src', `assets/contact_${theme}.svg`);
 };
 
 toggleSwitch.addEventListener('change', applyTheme);
