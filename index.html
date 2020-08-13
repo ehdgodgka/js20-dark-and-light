@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dark and light</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <ul id="nav-menus">
+        <li><a href="#hello-seoul">Hello</a></li>
+        <li><a href="#peek">peek</a></li>
+        <li><a href="#event">event</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <ul id="theme-switch-wrapper">
+        <i class="fas fa-sun"></i>
+        <label class="theme-switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </ul>
+    </nav>
+    <!-- home section-->
+    <section id="hello-seoul">
+      <div id="hello-seoul-title">
+        <h1>Hello Seoul</h1>
+        <h2>안녕 서울</h2>
+      </div>
+      <a class="photo-author">Photo by  </a>
+    </section>
+    <!-- iamge section-->
+    <section id="peek">
+      <h1>peek</h1>
+      <div class="image-container">
+        <a><img src="assets/seoul-img/img1_light.jpg" /></a>
+        <a><img src="assets/seoul-img/img2_light.jpg" /></a>
+        <a><img src="assets/seoul-img/img3_light.jpg" /></a>
+      </div>
+    </section>
+    <!-- Project section -->
+    <section id="event">
+      <h1>day event</h1>
+      <div class="event-container">
+        <div class="event-img-wrapper">
+          <img
+            class="event-img"
+            src="https://images.unsplash.com/photo-1583579366335-0bd96d9c1e84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+          />
+        </div>
+        <div class="event-content">
+          <h2 class="event-title">korean food and market tour</h2>
+          <p class="event-descript">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ultricies odio,
+            non pharetra nibh. Phasellus lacinia enim ex, mollis finibus massa vehicula eget.
+            Aliquam tristique id metus in tempor. Duis enim tortor, porttitor et dui sit amet,
+            placerat eleifend nunc.
+          </p>
+          <div class="btn-group">
+            <button class="primary">detail</button
+            ><button class="outline" disabled>full reserved</button>
+          </div>
+        </div>
+      </div>
+      <div class="event-container">
+        <div class="event-img-wrapper">
+          <img
+            class="event-img"
+            src="https://images.unsplash.com/photo-1536221563919-37c841f1f945?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          />
+        </div>
+
+        <div class="event-content">
+          <h2 class="event-title">palace walking tour</h2>
+          <p class="event-descript">
+            Duis enim tortor, porttitor et dui sit amet, placerat eleifend nunc. Nullam nunc neque,
+            pulvinar at lacinia et, dictum facilisis nunc. Curabitur eu eros convallis, iaculis
+            lorem in, semper urna. Quisque euismod varius sapien sit amet sollicitudin.
+          </p>
+          <div class="btn-group">
+            <button class="primary">detail</button><button class="outline">reserve</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact section -->
+    <section id="contact">
+      <h1>contact</h1>
+      <div id="contact-container">
+        <img src="assets/contact_light.svg" />
+        <div id="social-icons">
+          <i class="fas fa-envelope-square"></i>
+          <i class="fas fa-phone-square-alt"></i>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script -->
+    <script src="assets/seoul-img/img-link.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
