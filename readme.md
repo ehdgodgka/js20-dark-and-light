@@ -2,9 +2,9 @@
 <img src='assets/demo.gif'>
 
 ## feature
-- A tutorial site that practice changes styles with only JS and CSS dynamically.
+- A tutorial site that practice changes style dynamically with only JS and CSS .
 - There are light mode and dark mode. each mode corresponds to day and night of Seoul.
-- save theme mode
+- save theme mode state
 - responsive screen
 
 ---
