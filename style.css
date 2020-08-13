@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dokdo&family=East+Sea+Dokdo&display=swap');
-:root {
+[data-theme='light'] {
   --primary-color: #5dc4ff;
   --on-primary: rgb(250, 250, 250);
   --on-background: rgb(66, 66, 66);
