@@ -3,7 +3,7 @@
 
 [live view](https://ehdgodgka.github.io/js20-dark-and-light/.)
 ## feature
-- A tutorial site that practice changes style dynamically with only JS and CSS .
+- A website that practice changes style dynamically with only JS and CSS .
 - There are light mode and dark mode. each mode corresponds to day and night of Seoul.
 - save theme mode state
 - responsive screen
