@@ -1,6 +1,7 @@
 # light and dark ( Hello Seoul)
 <img src='assets/demo.gif'>
 
+[live view](https://ehdgodgka.github.io/js20-dark-and-light/.)
 ## feature
 - A tutorial site that practice changes style dynamically with only JS and CSS .
 - There are light mode and dark mode. each mode corresponds to day and night of Seoul.
